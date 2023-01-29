@@ -14,6 +14,8 @@
 		C742DA07298699E200B74C56 /* ProductsGNBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C742DA06298699E200B74C56 /* ProductsGNBTests.swift */; };
 		C742DA11298699E200B74C56 /* ProductsGNBUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C742DA10298699E200B74C56 /* ProductsGNBUITests.swift */; };
 		C742DA13298699E200B74C56 /* ProductsGNBUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C742DA12298699E200B74C56 /* ProductsGNBUITestsLaunchTests.swift */; };
+		C742DA2929869A9900B74C56 /* RateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C742DA2829869A9900B74C56 /* RateModel.swift */; };
+		C742DA2C29869AB400B74C56 /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C742DA2B29869AB400B74C56 /* TransactionModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		C742DA0C298699E200B74C56 /* ProductsGNBUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProductsGNBUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C742DA10298699E200B74C56 /* ProductsGNBUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsGNBUITests.swift; sourceTree = "<group>"; };
 		C742DA12298699E200B74C56 /* ProductsGNBUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsGNBUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C742DA2829869A9900B74C56 /* RateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateModel.swift; sourceTree = "<group>"; };
+		C742DA2B29869AB400B74C56 /* TransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,7 @@
 		C742D9F4298699E000B74C56 /* ProductsGNB */ = {
 			isa = PBXGroup;
 			children = (
+				C742DA2629869A8400B74C56 /* Model */,
 				C742D9F5298699E000B74C56 /* ProductsGNBApp.swift */,
 				C742D9F7298699E000B74C56 /* ContentView.swift */,
 				C742D9F9298699E200B74C56 /* Assets.xcassets */,
@@ -125,6 +130,31 @@
 				C742DA12298699E200B74C56 /* ProductsGNBUITestsLaunchTests.swift */,
 			);
 			path = ProductsGNBUITests;
+			sourceTree = "<group>";
+		};
+		C742DA2629869A8400B74C56 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C742DA2A29869A9F00B74C56 /* Transaction */,
+				C742DA2729869A8A00B74C56 /* Rate */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C742DA2729869A8A00B74C56 /* Rate */ = {
+			isa = PBXGroup;
+			children = (
+				C742DA2829869A9900B74C56 /* RateModel.swift */,
+			);
+			path = Rate;
+			sourceTree = "<group>";
+		};
+		C742DA2A29869A9F00B74C56 /* Transaction */ = {
+			isa = PBXGroup;
+			children = (
+				C742DA2B29869AB400B74C56 /* TransactionModel.swift */,
+			);
+			path = Transaction;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +287,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C742DA2C29869AB400B74C56 /* TransactionModel.swift in Sources */,
 				C742D9F8298699E000B74C56 /* ContentView.swift in Sources */,
+				C742DA2929869A9900B74C56 /* RateModel.swift in Sources */,
 				C742D9F6298699E000B74C56 /* ProductsGNBApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
