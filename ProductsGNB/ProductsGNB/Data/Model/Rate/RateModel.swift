@@ -7,8 +7,10 @@
 
 import Foundation
 
-struct RateModel: Codable{
+struct RateModel: Codable {
     let from: String
     let to: String
     let rate: Double
 }
+
+typealias Rates = [RateModel]

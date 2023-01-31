@@ -11,7 +11,7 @@ import SwiftUI
 struct ProductsGNBApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TransactionListRouter.view()
         }
     }
 }
