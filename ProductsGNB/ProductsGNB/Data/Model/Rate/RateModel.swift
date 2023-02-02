@@ -12,5 +12,3 @@ struct RateModel: Codable {
     let to: String
     let rate: Double
 }
-
-typealias Rates = [RateModel]

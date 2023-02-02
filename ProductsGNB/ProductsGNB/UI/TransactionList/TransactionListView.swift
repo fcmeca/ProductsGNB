@@ -10,16 +10,25 @@ import SwiftUI
 struct TransactionListView: View {
     
     @ObservedObject var transactionListViewModel: TransactionListViewModel
-
-        
+    
+    
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(transactionListViewModel.transactions){ transactions in
-                    Text("Product SKU: \(transactions.sku)")
+        Group{
+            if transactionListViewModel.loading {
+                CustomProgressView()
+            } else{
+                NavigationView {
+                    List {
+                        ForEach(transactionListViewModel.transactions){ transactions in
+                            NavigationLink(destination:transactionListViewModel.transactionDetailView(sku: transactions.sku)) {
+                                Text("\(transactions.sku)")
+                            }
+                        }
+                        
+                    }
+                    .navigationTitle("Product List")
                 }
             }
-            .navigationTitle("Transaction List: \(transactionListViewModel.transactions.count)")
         }
         .onAppear() {
             transactionListViewModel.getTransactions()

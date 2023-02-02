@@ -19,4 +19,8 @@ final class TransactionListRouter {
 
         return view
     }
+    
+    func transactionDetailView(sku: String, allTransactionFromSku: [TransactionModel]) -> TransactionDetailView {
+        return TransactionDetailRouter.view(sku: sku, transactions: allTransactionFromSku)
+    }
 }

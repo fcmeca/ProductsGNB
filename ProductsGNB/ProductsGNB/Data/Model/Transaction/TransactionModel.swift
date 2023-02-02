@@ -11,25 +11,13 @@ struct TransactionModel: Codable, Identifiable{
     var id = UUID()
     let sku: String
     let amount: Double
-    let currency: Currency
+    let currency: String
     
     enum CodingKeys: String, CodingKey {
-            case sku, amount, currency
-        }
+        case sku, amount, currency
+    }
     
     
-}
-
-enum Currency: String, Codable {
-    case aud = "AUD"
-    case cad = "CAD"
-    case eur = "EUR"
-    case gbp = "GBP"
-    case inr = "INR"
-    case jpy = "JPY"
-    case rub = "RUB"
-    case sek = "SEK"
-    case usd = "USD"
 }
 
 
@@ -38,7 +26,33 @@ extension TransactionModel: Equatable {
         //Logic that determines whether the value
         //on the left hand side and right hand side are equal
         return lhs.sku == rhs.sku
-      }
+    }
 }
 
+
+extension TransactionModel{
+    
+    
+    func convertToEuros(amount: Double, currency: String, conversions: [RateModel]) -> Double? {
+        let EUR = "EUR"
+        
+        if currency == EUR {
+            return amount.toBankersRounding
+        }else{
+            for conversion in conversions {
+                if conversion.from == currency {
+                    if conversion.to == EUR {
+                        return (amount * conversion.rate).toBankersRounding
+                    } else {
+                        let intermediateResult = convertToEuros(amount: amount, currency: conversion.to, conversions: conversions)
+                        if let intermediateResult = intermediateResult {
+                            return (intermediateResult * conversion.rate).toBankersRounding
+                        }
+                    }
+                }
+            }
+        }
+        return nil
+    }
+}
 

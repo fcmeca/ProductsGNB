@@ -20,7 +20,7 @@ final class RateService: APIClient {
         self.init(configuration: .default)
     }
     
-    func getRates() -> AnyPublisher<Rates, NetworkErrors> {
-        return execute(buildURLRequest(with: Constants.pathRates, httpMethod: HTTPMethod.get), decodingType: Rates.self, retries: 3)
+    func getRates() -> AnyPublisher<[RateModel], NetworkErrors> {
+        return execute(buildURLRequest(with: Constants.pathRates, httpMethod: HTTPMethod.get), decodingType: [RateModel].self, retries: 3)
     }
 }
