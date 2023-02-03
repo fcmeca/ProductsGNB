@@ -20,6 +20,7 @@
 		C764A8D0298AC0DE00CFD4DB /* TransactionDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C764A8CF298AC0DE00CFD4DB /* TransactionDetailViewModel.swift */; };
 		C764A8D2298AC13100CFD4DB /* TransactionDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C764A8D1298AC13100CFD4DB /* TransactionDetailRouter.swift */; };
 		C764A8D7298BA36300CFD4DB /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = C764A8D6298BA36300CFD4DB /* Double.swift */; };
+		C78FD463298D1BC500000DC9 /* TransactionModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78FD462298D1BC500000DC9 /* TransactionModelTest.swift */; };
 		C7A310042987F3D5008EE1C2 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A310032987F3D5008EE1C2 /* APIClient.swift */; };
 		C7A3100B29884153008EE1C2 /* RateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A3100A29884153008EE1C2 /* RateService.swift */; };
 		C7A3100E298844EA008EE1C2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A3100D298844EA008EE1C2 /* Constants.swift */; };
@@ -64,6 +65,7 @@
 		C764A8CF298AC0DE00CFD4DB /* TransactionDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailViewModel.swift; sourceTree = "<group>"; };
 		C764A8D1298AC13100CFD4DB /* TransactionDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailRouter.swift; sourceTree = "<group>"; };
 		C764A8D6298BA36300CFD4DB /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		C78FD462298D1BC500000DC9 /* TransactionModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModelTest.swift; sourceTree = "<group>"; };
 		C7A310032987F3D5008EE1C2 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		C7A3100A29884153008EE1C2 /* RateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateService.swift; sourceTree = "<group>"; };
 		C7A3100D298844EA008EE1C2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 		C742DA05298699E200B74C56 /* ProductsGNBTests */ = {
 			isa = PBXGroup;
 			children = (
+				C78FD45F298D1BA000000DC9 /* Data */,
 				C742DA06298699E200B74C56 /* ProductsGNBTests.swift */,
 			);
 			path = ProductsGNBTests;
@@ -196,6 +199,30 @@
 				C764A8D6298BA36300CFD4DB /* Double.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C78FD45F298D1BA000000DC9 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				C78FD460298D1BA600000DC9 /* Model */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		C78FD460298D1BA600000DC9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C78FD461298D1BAE00000DC9 /* Transaction */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C78FD461298D1BAE00000DC9 /* Transaction */ = {
+			isa = PBXGroup;
+			children = (
+				C78FD462298D1BC500000DC9 /* TransactionModelTest.swift */,
+			);
+			path = Transaction;
 			sourceTree = "<group>";
 		};
 		C7A30FFF2987C9CD008EE1C2 /* Data */ = {
@@ -432,6 +459,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C78FD463298D1BC500000DC9 /* TransactionModelTest.swift in Sources */,
 				C742DA07298699E200B74C56 /* ProductsGNBTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

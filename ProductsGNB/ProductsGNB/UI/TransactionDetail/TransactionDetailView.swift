@@ -18,6 +18,7 @@ struct TransactionDetailView: View {
                 Text("Product SKU:")
                 Text("\(transactionDetailViewModel.sku)")
                     .bold()
+                    .font(.system(size: 24))
                 List {
                     ForEach(transactionDetailViewModel.allTransactions){ transaction in
                         HStack{
@@ -37,6 +38,7 @@ struct TransactionDetailView: View {
                         .padding(20)
                 }
             }
+            .navigationBarTitleDisplayMode(.inline)
             .onAppear() {
                 transactionDetailViewModel.getRates()
             }
