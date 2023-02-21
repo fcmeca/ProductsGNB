@@ -8,19 +8,17 @@
 import Foundation
 import Combine
 
-final class TransactionDetailViewModel: ObservableObject {
+final class TransactionDetailViewModel: BaseViewModel {
+    
     
     private let router: TransactionDetailRouter
     private let ratesService: RateService
     @Published var sku: String
     @Published var total: Double = 0.0
     @Published var allTransactions: [TransactionModel] = []
-    @Published private(set) var loading = false
 
     var rates: [RateModel] = []
     
-    var subscribers = Set<AnyCancellable>()
-
     init(router: TransactionDetailRouter, ratesService: RateService, sku: String, allTransactions: [TransactionModel]) {
         self.router = router
         self.ratesService = ratesService

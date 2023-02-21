@@ -8,7 +8,7 @@
 import Foundation
 
 struct TransactionModel: Codable, Identifiable{
-    var id = UUID()
+    let id = UUID()
     let sku: String
     let amount: Double
     let currency: String
@@ -16,8 +16,6 @@ struct TransactionModel: Codable, Identifiable{
     enum CodingKeys: String, CodingKey {
         case sku, amount, currency
     }
-    
-    
 }
 
 

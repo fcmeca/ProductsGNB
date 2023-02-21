@@ -8,17 +8,13 @@
 import Foundation
 import Combine
 
-final class TransactionListViewModel: ObservableObject {
+final class TransactionListViewModel: BaseViewModel {
     
     private let router: TransactionListRouter
     private let transactionService: TransactionService
     var allTransactions: [TransactionModel] = []
 
     @Published var transactions: [TransactionModel] = []
-    
-    @Published private(set) var loading = false
-
-    var subscribers = Set<AnyCancellable>()
     
     // Initialization
     init(router: TransactionListRouter, service: TransactionService) {
